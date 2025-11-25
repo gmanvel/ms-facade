@@ -81,6 +81,10 @@ api.MapGet("/path/{param}", async (string param, PartnerCenterClient client, Can
 
 Add the new endpoint to the "API Endpoints" section in CLAUDE.md.
 
-## Step 8: Build and Verify
+## Step 8: Update README.md
+
+Add the new endpoint to the "API Endpoints" section in README.md, maintaining the same format as existing endpoints.
+
+## Step 9: Build and Verify
 
 Run `dotnet build` to verify there are no compilation errors.
