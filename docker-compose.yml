@@ -1,0 +1,21 @@
+services:
+  partnercenterfacade:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: partnercenter-facade
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - PartnerCenter__BaseUrl=https://api.partnercenter.microsoft.com
+      - PartnerCenter__ApiVersion=v1
+      - PartnerCenter__ClientId=${PC_CLIENT_ID}
+      - PartnerCenter__ClientSecret=${PC_CLIENT_SECRET}
+      - PartnerCenter__TenantId=${PC_TENANT_ID}
+    ports:
+      - "5001:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
