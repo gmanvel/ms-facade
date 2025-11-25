@@ -1,0 +1,1 @@
+/integrate-endpoint https://learn.microsoft.com/en-us/partner-center/developer/get-a-customer-subscription-usage-summary
